@@ -19,7 +19,7 @@ cd docs/
 # Get the docs from the root directory.
 cp ../*.md .
 # Fix any links to the Github pages.
-sed -i'.bak' -e 's|../..|https://github.com/'"$TRAVIS_REPO_SLUG"'|g' *.md;
+sed -i'.bak' -e 's|[(]\.\./\.\.|(https://github.com/'"$TRAVIS_REPO_SLUG"'|g' *.md;
 # Generate the documentation.
 doxygen Doxyfile 
 # Github pages will discard files beginning w/ underscores without this.
